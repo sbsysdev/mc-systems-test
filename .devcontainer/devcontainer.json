@@ -10,7 +10,8 @@
                 "mhutchie.git-graph",
                 "eamodio.gitlens",
                 "redhat.vscode-yaml",
-                "esbenp.prettier-vscode"
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss"
             ]
         }
     },
