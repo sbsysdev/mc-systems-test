@@ -1,5 +1,16 @@
+import { StoreProvider } from './providers/stores';
+import { ThemeProvider, ThemeSwitcher } from './providers/themes';
+
 const App = () => {
-    return <></>;
+    return (
+        <StoreProvider>
+            <ThemeProvider>
+                <main>
+                    <ThemeSwitcher />
+                </main>
+            </ThemeProvider>
+        </StoreProvider>
+    );
 };
 
 export default App;
