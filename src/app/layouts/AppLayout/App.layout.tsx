@@ -3,14 +3,14 @@ import { AppLayoutProps } from './app.props';
 // layouts
 import { ScrollLayout } from '@/shared/layouts';
 // components
-import { Appbar } from '@/app/components';
+import { Appbar, Sidenav } from '@/app/components';
 // utils
 import { content } from '@/shared/utils';
 
 const AppLayout = ({ children }: AppLayoutProps) => {
     return (
         <div className="flex flex-row overflow-hidden">
-            {/* <div>SIDEBAR</div> */}
+            <Sidenav />
 
             <ScrollLayout className="flex-grow gap-2" previos={<Appbar />}>
                 {content(children)}

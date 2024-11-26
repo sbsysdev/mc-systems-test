@@ -1,12 +1,12 @@
 // react
 import { configureStore } from '@reduxjs/toolkit';
 // app reducers
-import { themeReducer } from '../themes';
+import { appReducer } from './global.reducer';
 // modules reducers
 
 // configure redux store
 export const GlobalStore = configureStore({
     reducer: {
-        theme: themeReducer,
+        app: appReducer,
     },
 });

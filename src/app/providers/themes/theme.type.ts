@@ -11,4 +11,5 @@ export interface ThemeProviderProps {
 
 export interface ThemeSwitcherProps {
     className?: string;
+    hideHint?: boolean;
 }

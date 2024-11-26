@@ -9,7 +9,7 @@ import { Icon } from '@/shared/components';
 // assets
 import { mdiLightbulbNight, mdiLightbulbOn, mdiThemeLightDark } from '@mdi/js';
 
-const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+const ThemeSwitcher = ({ className, hideHint = false }: ThemeSwitcherProps) => {
     const { theme, changeTheme } = useTheme();
 
     const themes: Record<ThemePreference, { iso: ThemePreference; icon: string; hint: string }> = {
@@ -32,7 +32,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
     return (
         <ul
-            className={classNames('grid rounded-sm bg-base-100 theme-dark:bg-base-900', className)}
+            className={classNames('grid rounded-sm', className)}
             style={{
                 gridTemplateRows: `repeat(${Object.keys(themes).length}, minmax(0, 1fr))`,
             }}
@@ -43,7 +43,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
                 return (
                     <li key={themeIndex} className="flex flex-row">
                         <button
-                            className="flex-grow flex flex-row items-center rounded-sm gap-2 px-4 py-1 transition-all disabled:bg-primary-600 disabled:text-base-300 disabled:shadow-sm disabled:shadow-primary-600"
+                            className="flex-grow flex flex-row items-center rounded-sm gap-2 px-2 py-1 transition-all disabled:bg-primary-600 disabled:text-base-300 disabled:shadow-sm disabled:shadow-primary-600"
                             type="button"
                             title={currentTheme.hint}
                             onClick={() => {
@@ -51,11 +51,11 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
                             }}
                             disabled={currentTheme.iso === theme}
                         >
-                            <span>
+                            <span className="text-2xl">
                                 <Icon path={currentTheme.icon} />
                             </span>
 
-                            <span className="font-medium text-center">{currentTheme.hint}</span>
+                            {!hideHint && <span className="font-medium text-center">{currentTheme.hint}</span>}
                         </button>
                     </li>
                 );

@@ -1,8 +1,7 @@
 // react
 import { useCallback } from 'react';
 // store
-import { useGlobalDispatch, useGlobalSelector } from '../stores';
-import { themeActions, themeState } from './theme.reducer';
+import { appActions, appState, useGlobalDispatch, useGlobalSelector } from '../stores';
 // types
 import { ThemePreference } from './theme.type';
 // hooks
@@ -11,7 +10,7 @@ import { useLocalStorage } from '@/shared/hooks';
 export const useTheme = () => {
     const [storedTheme, setThemeToLocalStorage] = useLocalStorage<ThemePreference>('theme', 'os');
 
-    const { theme } = useGlobalSelector(themeState);
+    const { theme } = useGlobalSelector(appState);
     const dispatch = useGlobalDispatch();
 
     const changeTheme = useCallback(
@@ -19,7 +18,7 @@ export const useTheme = () => {
             try {
                 setThemeToLocalStorage(currentTheme);
 
-                dispatch(themeActions.setTheme(currentTheme));
+                dispatch(appActions.setTheme(currentTheme));
             } catch (error) {
                 console.error(error);
             }
