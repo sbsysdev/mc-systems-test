@@ -1,5 +1,5 @@
 import plugin from 'tailwindcss/plugin';
-import { rose, slate, teal } from 'tailwindcss/colors';
+import { gray, rose, teal } from 'tailwindcss/colors';
 
 const supportedAppThemeList = ['light', 'dark'];
 
@@ -12,7 +12,7 @@ export default {
             colors: {
                 primary: teal,
                 secondary: rose,
-                base: slate,
+                base: gray,
             },
             screens: {
                 '6xs': '320px',

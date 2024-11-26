@@ -1,13 +1,14 @@
+import { AppLayout } from './layouts';
 import { StoreProvider } from './providers/stores';
-import { ThemeProvider, ThemeSwitcher } from './providers/themes';
+import { ThemeProvider } from './providers/themes';
 
 const App = () => {
     return (
         <StoreProvider>
             <ThemeProvider>
-                <main>
-                    <ThemeSwitcher />
-                </main>
+                <AppLayout>
+                    <div>ROUTER OUTLET</div>
+                </AppLayout>
             </ThemeProvider>
         </StoreProvider>
     );

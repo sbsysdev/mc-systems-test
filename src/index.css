@@ -7,6 +7,12 @@
     *::before,
     *::after {
         @apply m-0 p-0;
+        scrollbar-color: theme(colors.primary.800) theme(colors.base.200);
+        scrollbar-width: thin;
+
+        .theme-dark & {
+            scrollbar-color: theme(colors.primary.200) theme(colors.base.800);
+        }
     }
     body {
         @apply flex flex-col h-[100dvh] font-main;
@@ -42,15 +48,15 @@
         @apply min-h-[4.8rem] max-h-[7.8rem];
     }
     option {
-        @apply bg-base-300 theme-dark:bg-base-700;
+        @apply bg-base-200 theme-dark:bg-base-800;
     }
 }
 
 @layer components {
     .theme-light {
-        @apply bg-base-300 text-base-700;
+        @apply bg-base-200 text-base-800;
     }
     .theme-dark {
-        @apply bg-base-700 text-base-300;
+        @apply bg-base-800 text-base-200;
     }
 }
