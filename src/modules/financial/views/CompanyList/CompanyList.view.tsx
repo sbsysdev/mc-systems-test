@@ -2,18 +2,24 @@
 import { CardLayout } from '@/shared/layouts';
 // components
 import { CompanyFilterForm, CompanyList } from '../../components';
+// hooks
+import { CompanyFilterContext, useCompanyFilterContext } from '../../hooks';
 
 const CompanyListView = () => {
-    return (
-        <main className="p-4 flex flex-col flex-grow gap-4">
-            <CardLayout>
-                <CompanyFilterForm />
-            </CardLayout>
+    const context = useCompanyFilterContext();
 
-            <CardLayout>
-                <CompanyList />
-            </CardLayout>
-        </main>
+    return (
+        <CompanyFilterContext.Provider value={context}>
+            <main className="p-4 flex flex-col flex-grow gap-4">
+                <CardLayout>
+                    <CompanyFilterForm />
+                </CardLayout>
+
+                <CardLayout>
+                    <CompanyList />
+                </CardLayout>
+            </main>
+        </CompanyFilterContext.Provider>
     );
 };
 

@@ -5,7 +5,7 @@ import { Slot, ThemeColor } from '@/shared/types';
 
 export interface FieldLayoutSlotProps {
     className?: string;
-    error: boolean;
+    error?: string;
     color: ThemeColor;
     unstyled: boolean;
 }
@@ -17,7 +17,7 @@ export interface FieldLayoutProps
     children?: Slot<FieldLayoutSlotProps>;
     after?: Slot<FieldLayoutSlotProps>;
     hint?: Slot<FieldLayoutSlotProps>;
-    error?: boolean;
+    error?: string;
     color?: ThemeColor;
     unstyled?: boolean;
 }

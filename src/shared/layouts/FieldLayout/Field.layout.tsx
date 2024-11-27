@@ -12,7 +12,7 @@ const FieldLayout = ({
     children,
     after,
     hint,
-    error = false,
+    error,
     color = 'base',
     unstyled = false,
     ...rest
