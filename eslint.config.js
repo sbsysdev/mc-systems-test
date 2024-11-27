@@ -3,6 +3,7 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import prettier from 'eslint-plugin-prettier';
+import query from '@tanstack/eslint-plugin-query';
 import configPrettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 
@@ -19,6 +20,7 @@ export default tseslint.config(
             'react-hooks': reactHooks,
             'react-refresh': reactRefresh,
             prettier: prettier,
+            query: query,
         },
         rules: {
             ...reactHooks.configs.recommended.rules,

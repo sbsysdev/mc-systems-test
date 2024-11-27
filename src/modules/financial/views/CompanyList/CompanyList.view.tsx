@@ -15,7 +15,7 @@ const CompanyListView = () => {
                     <CompanyFilterForm />
                 </CardLayout>
 
-                <CardLayout>
+                <CardLayout className="flex-grow">
                     <CompanyList />
                 </CardLayout>
             </main>
