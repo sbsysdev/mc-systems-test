@@ -9,7 +9,7 @@ const Appbar = () => {
     const { isSideOpen, toggleSidenav } = useSidenav();
 
     return (
-        <header className="flex flex-row px-4 py-2 bg-base-100 theme-dark:bg-base-700">
+        <header className="flex flex-row px-4 py-2 bg-base-100 theme-dark:bg-base-700 shadow-md">
             <Button onClick={toggleSidenav}>
                 <Icon className="text-xl" path={isSideOpen ? mdiMenuOpen : mdiMenuClose} />
             </Button>

@@ -35,7 +35,6 @@ export const useSidenav = (breakPoint: number = 768) => {
 
     // reactivity
     useEffect(() => {
-        console.log('EXE');
         const currentMedia: MediaQueryList = window.matchMedia(`(min-width: ${breakPoint}px)`);
 
         setMatchBreakPoint(currentMedia.matches);
