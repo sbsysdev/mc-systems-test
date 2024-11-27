@@ -10,7 +10,7 @@ const AppLayout = () => {
         <div className="flex flex-row overflow-hidden">
             <Sidenav />
 
-            <ScrollLayout className="flex-grow gap-2" previos={<Appbar />}>
+            <ScrollLayout className="flex-grow gap-2" previous={<Appbar />}>
                 <Outlet />
             </ScrollLayout>
         </div>

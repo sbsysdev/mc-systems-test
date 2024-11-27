@@ -1,5 +1,6 @@
-// components
+// layouts
 import { CardLayout } from '@/shared/layouts';
+// components
 import { CompanyFilterForm, CompanyList } from '../../components';
 
 const CompanyListView = () => {
