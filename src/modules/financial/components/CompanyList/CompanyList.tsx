@@ -2,6 +2,7 @@
 import { useCompanyFilter } from '../../hooks';
 // components
 import { Icon } from '@/shared/components';
+import { CompanyTable } from '../CompanyTable';
 // assets
 import { mdiLoading } from '@mdi/js';
 
@@ -32,7 +33,7 @@ const CompanyList = () => {
         );
     }
 
-    return data.map(company => company.NombreComercial);
+    return <CompanyTable data={data} />;
 };
 
 export default CompanyList;

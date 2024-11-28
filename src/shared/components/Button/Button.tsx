@@ -40,7 +40,7 @@ const Button = ({
                 'border-2 rounded-sm hover:scale-105 active:scale-95 disabled:scale-95 disabled:pointer-events-none',
                 variant === 'filled'
                     ? 'text-base-50 disabled:bg-opacity-80 theme-dark:bg-opacity-80'
-                    : 'bg-opacity-0 theme-dark:bg-opacity-0 hover:bg-opacity-10 theme-dark:hover:bg-opacity-10 active:bg-opacity-20 theme-dark:active:bg-opacity-20 disabled:bg-opacity-20 theme-dark:disabled:bg-opacity-20',
+                    : 'bg-opacity-0 theme-dark:bg-opacity-0 hover:bg-opacity-10 theme-dark:hover:bg-opacity-10 active:bg-opacity-20 theme-dark:active:bg-opacity-20 disabled:bg-opacity-10 theme-dark:disabled:bg-opacity-10',
                 variant !== 'filled' && textColor[color],
                 variant === 'text' &&
                     'border-opacity-0 theme-dark:border-opacity-0 hover:border-opacity-10 theme-dark:hover:border-opacity-10 active:border-opacity-20 theme-dark:active:border-opacity-20',

@@ -36,6 +36,7 @@ const CompanyFilterForm = () => {
                     id="country"
                     placeholder="Type here..."
                     {...register('country')}
+                    autoComplete="off"
                     disabled={isFetching}
                 />
             </FieldLayout>
